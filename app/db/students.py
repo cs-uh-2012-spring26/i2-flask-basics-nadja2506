@@ -53,3 +53,5 @@ class StudentResource:
             return
 
         self.collection.insert_many(students)
+    def delete_student(self, email):
+        self.collection.delete_one({EMAIL:email})
